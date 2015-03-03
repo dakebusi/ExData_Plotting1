@@ -16,7 +16,7 @@ plot(datetimes, data$Global_active_power, type="n", xlab="", ylab="Global Active
 lines(datetimes, data$Global_active_power)
 
 # Prepare the second plot, but not showing the points
-plot(datetimes, data$Voltage, type="n", ylab="Voltage")
+plot(datetimes, data$Voltage, type="n", xlab="datetime", ylab="Voltage")
 
 # Now add the lines
 lines(datetimes, data$Voltage)
