@@ -9,7 +9,7 @@ datetimes <- strptime(paste(data$Date, data$Time), format="%d/%m/%Y %H:%M:%S")
 # Prepare the plot, but not showing the points
 plot(datetimes, data$Sub_metering_1 , type="n", xlab="", ylab="Energy sub metering")
 
-# Now add the lines
+# Now add the lines for each sub metering
 lines(datetimes, data$Sub_metering_1)
 lines(datetimes, data$Sub_metering_2, col="red")
 lines(datetimes, data$Sub_metering_3, col="blue")

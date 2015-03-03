@@ -10,7 +10,7 @@ datetimes <- strptime(paste(data$Date, data$Time), format="%d/%m/%Y %H:%M:%S")
 plot(datetimes, data$Global_active_power, type="n", xlab="", ylab="Global Active Power (kilowatts)")
 
 # Now add the lines
-lines(datetimes, data$Global_active_power, xlab = "", ylab= "Global Active Power (kilowatts)")
+lines(datetimes, data$Global_active_power)
 
 # Copy the plot to a PNG file
 dev.copy(png, file = "plot2.png", width=480, height=480)
