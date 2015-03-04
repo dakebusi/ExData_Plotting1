@@ -10,16 +10,16 @@ datetimes <- strptime(paste(data$Date, data$Time), format="%d/%m/%Y %H:%M:%S")
 par(mfrow=c(2,2))
 
 # Prepare the first plot, but not showing the points
-plot(datetimes, data$Global_active_power, type="n", xlab="", ylab="Global Active Power (kilowatts)")
+plot(datetimes, data$Global_active_power, type="n", xlab="", ylab="Global Active Power")
 
 # Now add the lines
-lines(datetimes, data$Global_active_power, xlab = "", ylab= "Global Active Power (kilowatts)")
+lines(datetimes, data$Global_active_power)
 
 # Prepare the second plot, but not showing the points
-plot(datetimes, data$Voltage, type="n", xlab="", ylab="Global Active Power (kilowatts)")
+plot(datetimes, data$Voltage, type="n", xlab="datetime", ylab="Voltage")
 
 # Now add the lines
-lines(datetimes, data$Voltage, xlab="datetime", ylab= "Voltage")
+lines(datetimes, data$Voltage)
 
 # Prepare the third plot, but not showing the points
 plot(datetimes, data$Sub_metering_1 , type="n", xlab="", ylab="Energy sub metering")
@@ -31,10 +31,10 @@ lines(datetimes, data$Sub_metering_3, col="blue")
 
 # Add a legend
 legend("topright", legend = c("Sub_metering_1","Sub_metering_2","Sub_metering_3"), 
-       lwd=1, col=c("black","red","blue"), y.intersp=.5, cex=0.5, inset = 0)
+       lwd=1, col=c("black","red","blue"), y.intersp=.5, cex=0.5, inset = 0, bty="n")
 
 # Prepare the fourth plot, but not showing the points
-plot(datetimes, data$Global_reactive_power, type="n", xlab="", ylab="Global Active Power (kilowatts)")
+plot(datetimes, data$Global_reactive_power, type="n", xlab="datetime", ylab="Global_reactive_power")
 
 # Now add the lines
 lines(datetimes, data$Global_reactive_power)

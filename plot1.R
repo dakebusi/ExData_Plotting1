@@ -7,5 +7,5 @@ data <- read.csv("01_02.csv", sep = ";", na.strings=c("?"))
 hist(data$Global_active_power, col="red", xlab="Global Active Power (kilowatts)", main="Global Active Power")
 
 # Copy the plot to a PNG file
-dev.copy(png, file = "plot1.png", width=480, height=480))
+dev.copy(png, file = "plot1.png", width=480, height=480)
 dev.off()
